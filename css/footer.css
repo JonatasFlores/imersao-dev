@@ -1,5 +1,5 @@
 .footer {
-    position: absolute; /* Posicionamento absoluto em relação ao elemento pai posicionado */
+    position: fixed; /* Posicionamento absoluto em relação ao elemento pai posicionado */
     bottom: 0; /* Alinha na parte inferior */
     left: 0; /* Alinha à esquerda */
     width: 100%; /* Largura total */

@@ -1,0 +1,59 @@
+/* --- CSS para a Seção de Sugestões e o Formulário Embedado --- */
+
+.suggestions-section {
+    /* Alinha com o MAIN */
+    max-width: 80rem; 
+    margin: 40px auto;
+    padding: 20px 1rem;
+    text-align: center;
+    border-top: 1px solid var(--tertiary-color); /* Usa uma cor de variável para a linha */
+    padding-top: 3rem;
+    margin-bottom: 5rem; /* Garante que a seção não esbarre no footer fixo */
+}
+
+.suggestions-section h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.suggestions-section p {
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+/* Container para o Formulário Embedado (iframe) */
+.form-container {
+    width: 100%;
+    /* Centraliza o formulário se a seção tiver margens laterais */
+    display: flex;
+    justify-content: center;
+     background-image: url('../img/legal.png'); /* 👈 Use o caminho correto para sua imagem */
+    background-size: cover; /* Garante que a imagem cubra toda a seção */
+    background-position: center; /* Centraliza a imagem */
+}
+
+/* Garante que o iframe seja responsivo (sempre 100% da largura do pai) */
+.form-container iframe {
+    /* Forçamos a largura total para telas maiores */
+    width: 100%; 
+    /* Altura que você vai ajustar se o conteúdo for cortado. */
+    height: 915px; 
+    /* Garante que não ultrapasse a largura do container */
+    max-width: 800px; 
+}
+
+/* Estilos Responsivos para o Formulário */
+@media (max-width: 768px) {
+    .suggestions-section {
+        padding: 1rem;
+    }
+    
+    .form-container iframe {
+        /* Garante que ele ocupe quase a largura total em telas pequenas */
+        max-width: 100%; 
+        /* Reduz a altura se necessário */
+        height: 500px;
+    }
+}
